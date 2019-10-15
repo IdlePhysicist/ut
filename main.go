@@ -13,7 +13,7 @@ import (
 
 // Mon Jan 2 15:04:05 -0700 MST 2006
 var (
-  ref =   map[string]string{`YYYY`: `2006`, `MM`: `01`, `DD`: `02`}
+  ref =   map[string]string{`YYYY`: `2006`, `MM`: `01`, `DD`: `02`, `hh`: `15`, `mm`: `04`, `ss`: `05`}
   version string
   commit  string
   versionFlg bool
@@ -65,6 +65,21 @@ func main() {
 }
 
 func convertFormat(format string) (string, error) {
+  if strings.Count(format, `h`) != 2 {
+    return ``, errors.New(`Length of day format is not two`)
+  }
+  format = strings.Replace(format, `hh`, ref[`hh`], 1)
+
+  if strings.Count(format, `m`) != 2 {
+    return ``, errors.New(`Length of day format is not two`)
+  }
+  format = strings.Replace(format, `mm`, ref[`mm`], 1)
+
+  if strings.Count(format, `s`) != 2 {
+    return ``, errors.New(`Length of day format is not two`)
+  }
+  format = strings.Replace(format, `ss`, ref[`ss`], 1)
+
   if strings.Count(format, `D`) != 2 {
     return ``, errors.New(`Length of day format is not two`)
   }
