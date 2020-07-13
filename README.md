@@ -1,10 +1,10 @@
 # UT
 
-*IdlePhysicist, 2019*
+_IdlePhysicist, 2019_
 
 This is a very basic (and limited) piece of software. It was written in about 15 minutes for one purpose, I decided to commit it here because it might be useful in the future and will save me 15 minutes down the road. 
 
-## Usage
+## Usage
 
 ```shell
 $ ut -nf YYYY-MM-DD -- 2019-08-01
