@@ -12,3 +12,4 @@ $ ut -nf YYYY-MM-DD -- 2019-08-01
 
 The `-n` flag fudges the calculation by taking the time to be noon that day and not midnight, this is because I found that I was getting the pervious date when I re-parsed the timestamp.
 
+
