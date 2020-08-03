@@ -1,4 +1,4 @@
-module github.com/idlephysicist/ut
+module github.com/IdlePhysicist/ut
 
 go 1.13
 
